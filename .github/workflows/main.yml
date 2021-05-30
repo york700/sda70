@@ -1,0 +1,46 @@
+- Open a nicehash account
+- Enable 2FA 
+- Get a bitcoin deposit address
+- List of nicehash algorithms is here: https://www.nicehash.com/algorithm
+- Profitability calculator that lets you determine which crypto to mine based on hardware / currency / electricity cost is here: https://www.nicehash.com/profitability-calculator
+- Use this to determine the most profitable algorithm for the upcoming day
+- Select stratum based on algorithm and location from here: https://www.nicehash.com/farm-mining
+- Set up a configuration file as follows:
+https://github.com/nicehash/ccminer-nanashi/blob/master/README.txt
+https://github.com/nicehash/ccminer-nanashi/blob/master/ccminer.conf
+
+
+```
+{
+	"_comment1" : "Possible keys are the long options (ccminer --help)",
+	"_comment2" : "todo: support /* comments */",
+
+	"algo" : "blake",
+	"intensity": 19,
+
+	"api-bind": "127.0.0.1:4068",
+	"statsavg": 20,
+
+	"quiet" : false,
+	"debug" : false,
+	"protocol" : false,
+	"cpu-priority" : 3,
+
+	"url" : "stratum+tcp://stratum.eu.miners-pool.eu:8421",
+	"user" : "ShGCAFrspnLDo414EzUyJm4k5Qr2Kkrmvh",
+	"pass" : "x"
+}
+```
+
+
+
+
+```
+sudo apt-get install build-essential libcurl4-openssl-dev git automake
+git clone https://github.com/tpruvot/ccminer.git
+cd ccminer
+./autogen.sh
+./configure CFLAGS="-O3 -Wall -march=native"
+make
+./ccminer -o stratum+tcp://blake2s.usa.nicehash.com:3361 --userpass=<your-bitcoin-address>:x -a blake2s -i 25
+```

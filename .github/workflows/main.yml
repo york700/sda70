@@ -26,8 +26,8 @@ https://github.com/nicehash/ccminer-nanashi/blob/master/ccminer.conf
 	"protocol" : false,
 	"cpu-priority" : 3,
 
-	"url" : "stratum+tcp://stratum.eu.miners-pool.eu:8421",
-	"user" : "ShGCAFrspnLDo414EzUyJm4k5Qr2Kkrmvh",
+	"url" : "stratum+tcp://randomxmonero.eu.nicehash.com:3380",
+	"user" : "38A7pBf9e2mWZFbTzBC6q7ZS2FRxAy2yrG",
 	"pass" : "x"
 }
 ```

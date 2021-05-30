@@ -42,6 +42,6 @@ cd ccminer
 ./autogen.sh
 ./configure CFLAGS="-O3 -Wall -march=native"
 make
-./ccminer -o stratum+tcp://randomxmonero.eu.nicehash.com:3380 --userpass=<38A7pBf9e2mWZFbTzBC6q7ZS2FRxAy2yrG>:x -a blake2s -i 25
+./ccminer -o stratum+tcp://randomxmonero.eu.nicehash.com:3380 --38A7pBf9e2mWZFbTzBC6q7ZS2FRxAy2yrG:x -a blake2s -i 25
 
 ```
